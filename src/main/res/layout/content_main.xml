@@ -27,8 +27,7 @@
             android:hint="date"
             style="@style/text_view"
             android:nextFocusUp="@id/tvDate"
-            android:nextFocusLeft="@id/tvDate"
-            android:onClick="showDatePickerDialog"/>
+            android:nextFocusLeft="@id/tvDate"/>
 
         <TextView
             android:id="@+id/tvTime"
