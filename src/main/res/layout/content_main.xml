@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ClientAppActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:hint="date"
+            style="@style/text_view"
+            android:nextFocusUp="@id/tvDate"
+            android:nextFocusLeft="@id/tvDate"
+            android:onClick="showDatePickerDialog"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            style="@style/text_view"
+            android:hint="time"/>
+
+        <EditText
+            android:id="@+id/etTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/text_size"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:hint="C"/>
+
+        <CheckBox
+            android:id="@+id/chTrueBbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="15dp"
+            android:text="BBT"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnReadTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="read"/>
+
+        <Button
+            android:id="@+id/btnWriteTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="write"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorConsoleBg"
+            android:id="@+id/tvConsole"
+            android:scrollbars="vertical"
+            android:layout_margin="4dp"/>
+
+        <ProgressBar
+            android:id="@+id/indeterminateBar"
+            android:layout_margin="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            />
+
+    </FrameLayout>
+
+</LinearLayout>

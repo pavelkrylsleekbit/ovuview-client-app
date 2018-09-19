@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="console_text_size">12sp</dimen>
+
+</resources>
